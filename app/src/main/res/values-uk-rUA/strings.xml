@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Кінотека</string>
+    <string name="bt_main_popular">Популярні кінострічки</string>
+    <string name="bt_my_catalogs">Мої каталоги</string>
+    <string name="empty_catalog_list">Немає створених каталогів \nНатисніть "\"+\"" щоб додати</string>
+    <string name="empty_movie_list">Каталог пустий \n\n * щоб додати кінострічку натисніть </string>
+    <string name="release">Дата випуску: </string>
+    <string name="rating">Рейтинг: </string>
+    <string name="language">Мова оригіналу: </string>
+    <string name="ok">Так</string>
+    <string name="cancel">Закрити</string>
+    <string name="catalog">Каталог </string>
+    <string name="catalogs">Каталоги </string>
+    <string name="is_saved"> збережений</string>
+    <string name="search">Пошук</string>
+    <string name="added_to_catalog"> доданий до каталогу(ів)</string>
+    <string name="no_network_connection">Відсутнє інтернет з\'єднання</string>
+    <string name="no_available_catalog">Немає доступних каталогів</string>
+    <string name="error_message">Це поле не може бути пустим</string>
+    <string name="choose_catalog">Виберіть каталог(и)</string>
+    <string name="type_catalog_name">Введіть назву каталога</string>
+    <string name="is_removed"> видалений</string>
+
+    <string name="error_player">Помилка ініціалізації YouTubePlayer (%1$s)</string>
+</resources>

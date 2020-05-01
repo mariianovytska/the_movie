@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size_step">1sp</dimen>
+    <dimen name="text_size_xxsmall">8sp</dimen>
+    <dimen name="text_size_xsmall">10sp</dimen>
+    <dimen name="text_size_tiny">12sp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_primary">16sp</dimen>
+    <dimen name="text_size_big">18sp</dimen>
+    <dimen name="text_size_large">24sp</dimen>
+    <dimen name="text_size_xlarge">26sp</dimen>
+    <dimen name="text_size_xxlarge">30sp</dimen>
+    <dimen name="text_size_xlargex">27sp</dimen>
+    <dimen name="text_size_huge">32sp</dimen>
+    <dimen name="text_size_xhuge">34sp</dimen>
+    <dimen name="text_size_xhugex">40sp</dimen>
+    <dimen name="text_size_xxhuge">46sp</dimen>
+    <dimen name="text_size_xxxxlarge">56sp</dimen>
+
+    <!-- Padding -->
+    <dimen name="padding_xxsmall">2dp</dimen>
+    <dimen name="padding_xsmall">4dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_default">12dp</dimen>
+    <dimen name="padding_xdefault">14dp</dimen>
+    <dimen name="padding_medium">16dp</dimen>
+    <dimen name="padding_large">20dp</dimen>
+    <dimen name="padding_mlarge">22dp</dimen>
+    <dimen name="padding_xlarge">24dp</dimen>
+    <dimen name="padding_xxlarge">28dp</dimen>
+    <dimen name="padding_xxxlarge">32dp</dimen>
+    <dimen name="padding_xxxxlarge">48dp</dimen>
+    <dimen name="padding_5xlarge">74dp</dimen>
+
+    <!-- Margins -->
+    <dimen name="margin_xxxsmall">1dp</dimen>
+    <dimen name="margin_xxsmall">2dp</dimen>
+    <dimen name="margin_xsmall">4dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_default">12dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_large">20dp</dimen>
+    <dimen name="margin_mlarge">22dp</dimen>
+    <dimen name="margin_xlarge">24dp</dimen>
+    <dimen name="margin_xxlarge">24dp</dimen>
+    <dimen name="margin_xxxlarge">32dp</dimen>
+    <dimen name="margin_xxxlargex">36dp</dimen>
+    <dimen name="margin_xxxxlarge">48dp</dimen>
+    <dimen name="margin_xxxxlargex">50dp</dimen>
+    <dimen name="margin_xxxxlargexxx">90dp</dimen>
+    <dimen name="margin_xxxxxlargexxx">120dp</dimen>
+</resources>

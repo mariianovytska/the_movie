@@ -1,0 +1,25 @@
+<resources>
+        <string name="app_name">TheMovie</string>
+        <string name="bt_main_popular">Popular movies</string>
+        <string name="bt_my_catalogs">My catalogs</string>
+        <string name="empty_catalog_list">No catalogs created \nPress "\"+\"" to add one</string>
+        <string name="empty_movie_list">Catalog is empty \n\n * to add movie press </string>
+        <string name="release">Release: </string>
+        <string name="rating">Rating: </string>
+        <string name="language">Language: </string>
+        <string name="ok">OK</string>
+        <string name="cancel">Cancel</string>
+        <string name="catalog">Catalog </string>
+        <string name="catalogs">Catalogs </string>
+        <string name="is_saved"> is saved</string>
+        <string name="search">Type your keyword here</string>
+        <string name="added_to_catalog"> is added to catalog(s)</string>
+        <string name="no_network_connection">No network connection</string>
+        <string name="no_available_catalog">There is no available catalogs</string>
+        <string name="error_message">Catalog name can\'t be empty</string>
+        <string name="choose_catalog">Choose catalog(s)</string>
+        <string name="type_catalog_name">Type catalog name</string>
+        <string name="is_removed"> is removed</string>
+
+        <string name="error_player">There was an error initializing the YouTubePlayer (%1$s)</string>
+</resources>

@@ -1,0 +1,123 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+def keystorePropertiesFile = rootProject.file("keystore.properties")
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+
+android {
+    signingConfigs {
+        release {
+            storeFile file(keystoreProperties.getProperty('storeFile'))
+            storePassword keystoreProperties.getProperty('storePassword')
+            keyAlias = keystoreProperties.getProperty('keyAlias')
+            keyPassword keystoreProperties.getProperty('keyPassword')
+        }
+    }
+    compileSdkVersion 28
+    testBuildType "release"
+    defaultConfig {
+        applicationId "com.mobile_app.themovie"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 12
+        versionName "1.2"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildTypes.each {
+        it.buildConfigField 'String', 'API_KEY', themoviesdbkey
+        it.buildConfigField 'String', 'BASE_URL', themoviesdburl
+        it.buildConfigField 'String', 'IMAGE_URL', themoviesdbposter
+        it.buildConfigField 'String', 'POPULAR', populartype
+        it.buildConfigField 'String', 'OTHER', othertype
+        it.buildConfigField 'String', 'DEVELOPER_KEY', developerkey
+    }
+    dataBinding {
+        enabled true
+    }
+
+}
+
+dependencies {
+    def paging_version = "2.1.2"
+    def retrofit_version = "2.6.0"
+    def rxjava2_version = "2.1.1"
+    def gson_version = "2.8.5"
+    def picasso_version = "2.5.1"
+    def dagger_version = "2.20"
+    def dagger__android_version = "2.23.1"
+    def livedata_version = "1.1.1"
+    def room_version = "2.2.5"
+    def material_version = "1.1.0"
+    def viewsupport_version = "28.0.0"
+    def lifecycle_version = "2.2.0"
+    def common_version = "16+"
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    //Gson
+    implementation "com.google.code.gson:gson:$gson_version"
+    //Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+    //RxJava2
+    implementation "io.reactivex.rxjava2:rxandroid:$rxjava2_version"
+    //Pacasso
+    implementation "com.squareup.picasso:picasso:$picasso_version"
+    //Dagger2
+    implementation "com.google.dagger:dagger-android:$dagger__android_version"
+    annotationProcessor "com.google.dagger:dagger-android-processor:$dagger_version"
+    annotationProcessor "com.google.dagger:dagger-compiler:$dagger_version"
+    kapt "com.google.dagger:dagger-android-processor:$dagger_version"
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+    // Extensions = ViewModel + LiveData
+    implementation "android.arch.lifecycle:reactivestreams:$livedata_version"
+    implementation "android.arch.lifecycle:viewmodel:$livedata_version"
+    implementation "android.arch.lifecycle:extensions:$livedata_version"
+    kapt "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
+    //View support
+    implementation "com.android.support:cardview-v7:$viewsupport_version"
+    implementation "com.android.support:recyclerview-v7:$viewsupport_version"
+    implementation "com.android.support:design:$viewsupport_version"
+    //Room
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+    implementation "androidx.room:room-rxjava2:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    //Paging
+    implementation "androidx.paging:paging-runtime:$paging_version"
+    //RxJava paging support
+    implementation "androidx.paging:paging-rxjava2:$paging_version"
+    //Material component theme
+    implementation "com.google.android.material:material:$material_version"
+    //Common base
+    implementation "com.google.guava:guava:$common_version"
+    //YouTube player
+    implementation files('libs/YouTubeAndroidPlayerApi.jar')
+}
