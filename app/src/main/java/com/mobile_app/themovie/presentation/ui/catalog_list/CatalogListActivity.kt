@@ -51,16 +51,16 @@ class CatalogListActivity : AppCompatActivity() {
             .build()
             .inject(this)
 
-        // Popular
-        setUpPopularBtn()
+//        // Popular
+//        setUpPopularBtn()
 
-        // Other Catalogs
-        val adapter = CatalogListAdapter(
-            { catalogClickListener.onNext(it) },
-            { removeMovieListener.onNext(it) }
-        )
-        binding.rvCatalog.adapter = adapter
-        binding.rvCatalog.layoutManager = LinearLayoutManager(this)
+//        // Other Catalogs
+//        val adapter = CatalogListAdapter(
+//            { catalogClickListener.onNext(it) },
+//            { removeMovieListener.onNext(it) }
+//        )
+//        binding.rvCatalog.adapter = adapter
+//        binding.rvCatalog.layoutManager = LinearLayoutManager(this)
 
         // Set up tab bar
         binding.tabSection.setText(resources.getString(R.string.catalogs))
